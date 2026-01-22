@@ -19,65 +19,55 @@ This project demonstrates the power of GenLayer's Intelligent Contracts by build
 ## 📁 Project Structure
 
 ```
-genlayer-task-verifier/
-├── contracts/
-│   └── task_verifier.py      # Main Intelligent Contract
-├── tests/
-│   └── test_task_verifier.py # Test suite
-├── docs/
-│   └── ARCHITECTURE_DIAGRAM.html
-├── SETUP_GUIDE.md            # Complete beginner guide
-├── TUTORIAL_BLOG_POST.md     # Technical deep-dive
-└── README.md                 # This file
-```
+# GenLayer Task Verifier
 
-## 🚀 Quick Start
+An AI-Verified Task Completion System built on GenLayer's Intelligent Contracts.
+
+## Description
+
+This project demonstrates GenLayer's Intelligent Contracts by building a task/bounty verification system where AI validators reach consensus on whether work has been completed.
+
+## Installation Instructions
 
 ### Prerequisites
-
 - Node.js 18+
 - Docker 26+
-- OpenAI API key (or other LLM provider)
+- GenLayer CLI
 
-### Installation
+### Setup
 
+1. Install GenLayer CLI:
 ```bash
-# Install GenLayer CLI
 npm install -g genlayer
+```
 
-# Initialize GenLayer
+2. Initialize GenLayer:
+```bash
 genlayer init
+```
 
-# Start local environment
+3. Start the environment:
+```bash
 genlayer up
+```
 
-# Deploy the contract
+4. Deploy the contract:
+```bash
 genlayer deploy --contract contracts/task_verifier.py
 ```
 
-### Basic Usage
+## Features
 
-```python
-# 1. Create a task
-create_task(
-    title="Write Documentation",
-    description="Create API docs for the REST endpoints",
-    verification_criteria="Docs must include all endpoints, request/response examples, and auth section",
-    reward_amount=100
-)
+- Create tasks with verification criteria
+- Submit proof URLs for AI verification
+- Decentralized AI consensus using multiple validators
+- Automatic task status updates
 
-# 2. Worker claims the task
-claim_task(task_id=0)
+## Built With
 
-# 3. Worker submits proof
-submit_proof(
-    task_id=0,
-    proof_url="https://github.com/user/docs-repo"
-)
-
-# 4. AI verification
-verify_completion(task_id=0)
-# Returns: "VERIFIED: Documentation includes all required sections..."
+- GenLayer Intelligent Contracts
+- Python
+- Optimistic Democracy Consensus"
 ```
 
 ## 🏗️ Architecture
