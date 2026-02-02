@@ -1,0 +1,32 @@
+{
+  "name": "crabtrader",
+  "version": "1.0.0",
+  "description": "Autonomous AI agent for onchain trading and NFT minting on Base.",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "deploy:nft": "tsx scripts/deploy.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.36.3",
+    "@openzeppelin/contracts": "^5.0.2",
+    "dotenv": "^16.4.5",
+    "pg": "^8.11.5",
+    "solc": "^0.8.21",
+    "twitter-api-v2": "^1.18.0",
+    "viem": "^2.17.6",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.5"
+  }
+}
